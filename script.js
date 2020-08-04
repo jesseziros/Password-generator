@@ -1,7 +1,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
-    //var password = generatePassword();
+    var password = generatePassword();
     var passwordText = document.querySelector("#password");
     var alert1 = window.prompt("How long would you like your password to be? Must be between 8-128 characters");
     var alert2 = window.confirm("Do you want lower case letters?");
@@ -13,20 +13,78 @@ function writePassword() {
     var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var specialCharacters = ["*", "&", "/", "<", ">", "?", ";", "!", "#", "$"]
 
+    function generatePassword();
+
     if (alert2 === true && alert3 === true && alert4 === true && alert5 === true) {
+      const random = Math.floor(Math.random() * lowerCase.length);
+      const random1 = Math.floor(Math.random() * upperCase.length);
+      const random2 = Math.floor(Math.random() * numbers.length);
+      const random3 = Math.floor(Math.random() * specialCharacters.length);
+      console.log(random, alert2[random])
+      console.log(random, alert3[random1])
+      console.log(random, alert4[random2])
+      console.log(random, alert5[random3])
+      generatePassword()
 
     }else if (alert2 === true && alert3 === true && alert4 === true && alert5 === false) { 
+      const random = Math.floor(Math.random() * lowerCase.length);
+      const random1 = Math.floor(Math.random() * upperCase.length);
+      const random2 = Math.floor(Math.random() * numbers.length);
+      console.log(random, alert2[random])
+      console.log(random, alert3[random1])
+      console.log(random, alert4[random2])
+      generatePassword()
 
     }else if (alert2 === true && alert3 === true && alert4 === false && alert5 === false) {
+      const random = Math.floor(Math.random() * lowerCase.length);
+      const random1 = Math.floor(Math.random() * upperCase.length);
+      console.log(random, alert2[random])
+      console.log(random, alert3[random1])
+      generatePassword()
 
     }else if (alert2 === true && alert3 === false && alert4 === false && alert5 === false) {
-        
-    }
+      const random = Math.floor(Math.random() * lowerCase.length);
+      console.log(random, alert2[random])
+      generatePassword()
 
-    }
+    }else if (alert2 === false && alert3 === false && alert4 === false && alert5 === false) {
+      alert("no options chosen")
 
-    console.log(alert1)
-    console.log(alert2)
+    }else if (alert2 === true && alert3 === false && alert4 === true && alert5 === false) {
+      const random = Math.floor(Math.random() * lowerCase.length);
+      const random2 = Math.floor(Math.random() * numbers.length);
+      console.log(random, alert2[random])
+      console.log(random, alert4[random2])    
+      generatePassword()
+
+    }else if (alert2 === false && alert3 === true && alert4 === false && alert5 === true) {      
+      const random1 = Math.floor(Math.random() * upperCase.length);     
+      const random3 = Math.floor(Math.random() * specialCharacters.length);     
+      console.log(random, alert3[random1])     
+      console.log(random, alert5[random3])
+      generatePassword()
+
+    }else if (alert2 === false && alert3 === false && alert4 === false && alert5 === true) {    
+      const random3 = Math.floor(Math.random() * specialCharacters.length);
+      console.log(random, alert5[random3])
+      generatePassword()
+
+    }else if (alert2 === false && alert3 === false && alert4 === true && alert5 === true) {
+      const random2 = Math.floor(Math.random() * numbers.length);
+      const random3 = Math.floor(Math.random() * specialCharacters.length);
+      console.log(random, alert4[random2])
+      console.log(random, alert5[random3])
+      generatePassword()
+
+    }else if (alert2 === false && alert3 === true && alert4 === true && alert5 === true) {
+      const random1 = Math.floor(Math.random() * upperCase.length);
+      const random2 = Math.floor(Math.random() * numbers.length);
+      const random3 = Math.floor(Math.random() * specialCharacters.length);
+      console.log(random, alert3[random1])
+      console.log(random, alert4[random2])
+      console.log(random, alert5[random3])
+      generatePassword()
+    }
 
   passwordText.value = password;
 // 2. I need to have confirms assigned to ask user what they want in there password
