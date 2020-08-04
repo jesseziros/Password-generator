@@ -13,97 +13,20 @@ function writePassword() {
     var specialCharacters = ["*", "&", "/", "<", ">", "?", ";", "!", "#", "$"]
     var possbileCharacters = []
 
-    if (alert2 === true && alert3 === true && alert4 === true && alert5 === true) {
-      const random = Math.floor(Math.random() * lowerCase.length);
-      const random1 = Math.floor(Math.random() * upperCase.length);
-      const random2 = Math.floor(Math.random() * numbers.length);
-      const random3 = Math.floor(Math.random() * specialCharacters.length);
-      console.log(random, alert2[random])
-      console.log(random, alert3[random1])
-      console.log(random, alert4[random2])
-      console.log(random, alert5[random3])
-      console.log(possbileCharacters)
+    
+    if (alert2 === true) {
       possbileCharacters.push(lowerCase)
-      possbileCharacters.push(upperCase)
-      possbileCharacters.push(numbers)
-      possbileCharacters.push(specialCharacters)
-      
-
-    }else if (alert2 === true && alert3 === true && alert4 === true && alert5 === false) { 
-      const random = Math.floor(Math.random() * lowerCase.length);
-      const random1 = Math.floor(Math.random() * upperCase.length);
-      const random2 = Math.floor(Math.random() * numbers.length);
-      console.log(random, alert2[random])
-      console.log(random, alert3[random1])
-      console.log(random, alert4[random2])
-      possbileCharacters.push(lowerCase)
-      possbileCharacters.push(upperCase)
-      possbileCharacters.push(numbers)
-     
-      
-
-    }else if (alert2 === true && alert3 === true && alert4 === false && alert5 === false) {
-      const random = Math.floor(Math.random() * lowerCase.length);
-      const random1 = Math.floor(Math.random() * upperCase.length);
-      console.log(random, alert2[random])
-      console.log(random, alert3[random1])
-      possbileCharacters.push(lowerCase)
-      possbileCharacters.push(upperCase)
-     
-
-    }else if (alert2 === true && alert3 === false && alert4 === false && alert5 === false) {
-      const random = Math.floor(Math.random() * lowerCase.length);
-      console.log(random, alert2[random])
-      possbileCharacters.push(lowerCase)
-     
-
-    }else if (alert2 === false && alert3 === false && alert4 === false && alert5 === false) {
-      alert("no options chosen")
-
-    }else if (alert2 === true && alert3 === false && alert4 === true && alert5 === false) {
-      const random = Math.floor(Math.random() * lowerCase.length);
-      const random2 = Math.floor(Math.random() * numbers.length);
-      console.log(random, alert2[random])
-      console.log(random, alert4[random2])    
-      possbileCharacters.push(lowerCase)
-      possbileCharacters.push(numbers)      
-
-    }else if (alert2 === false && alert3 === true && alert4 === false && alert5 === true) {      
-      const random1 = Math.floor(Math.random() * upperCase.length);     
-      const random3 = Math.floor(Math.random() * specialCharacters.length);     
-      console.log(random, alert3[random1])     
-      console.log(random, alert5[random3])
-      possbileCharacters.push(upperCase)
-      possbileCharacters.push(specialCharacters)
-      
-
-    }else if (alert2 === false && alert3 === false && alert4 === false && alert5 === true) {    
-      const random3 = Math.floor(Math.random() * specialCharacters.length);
-      console.log(random, alert5[random3])
-      possbileCharacters.push(specialCharacters)
-      
-
-    }else if (alert2 === false && alert3 === false && alert4 === true && alert5 === true) {
-      const random2 = Math.floor(Math.random() * numbers.length);
-      const random3 = Math.floor(Math.random() * specialCharacters.length);
-      console.log(random, alert4[random2])
-      console.log(random, alert5[random3])
-      possbileCharacters.push(numbers)
-      possbileCharacters.push(specialCharacters)
-      
-
-    }else if (alert2 === false && alert3 === true && alert4 === true && alert5 === true) {
-      const random1 = Math.floor(Math.random() * upperCase.length);
-      const random2 = Math.floor(Math.random() * numbers.length);
-      const random3 = Math.floor(Math.random() * specialCharacters.length);
-      console.log(random, alert3[random1])
-      console.log(random, alert4[random2])
-      console.log(random, alert5[random3])
-      possbileCharacters.push(upperCase)
-      possbileCharacters.push(numbers)
-      possbileCharacters.push(specialCharacters)
-      
     }
+    if (alert3 === true) {
+      possbileCharacters.push(upperCase)
+    }
+    if (alert4 === true) {
+      possbileCharacters.push(numbers)
+    }
+    if (alert5 === true) {
+      possbileCharacters.push(specialCharacters)
+    }
+    console.log(alert1)
 
   passwordText.value = possbileCharacters;
 // 2. I need to have confirms assigned to ask user what they want in there password
