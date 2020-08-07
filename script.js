@@ -11,24 +11,41 @@ function writePassword() {
     var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var specialCharacters = ["*", "&", "/", "<", ">", "?", ";", "!", "#", "$"]
-    var possbileCharacters = []
+    var possibleCharacters = [];
+    var password = "";
 
+      if (alert2 === true) {
+        possibleCharacters = possibleCharacters.concat(lowerCase)
+        var randomNumber = Math.floor((Math.random() * lowerCase.length) + 0);
+        password = password + lowerCase[randomNumber]
+      }
+      if (alert3 === true) {
+        possibleCharacters = possibleCharacters.concat(upperCase)
+        var randomNumber = Math.floor((Math.random() * upperCase.length) + 0);
+        password = password + upperCase[randomNumber]
+      }
+      if (alert4 === true) {
+        possibleCharacters = possibleCharacters.concat(numbers)
+        var randomNumber = Math.floor((Math.random() * numbers.length) + 0);
+        password = password + numbers[randomNumber]
+      }
+      if (alert5 === true) {
+        possibleCharacters = possibleCharacters.concat(specialCharacters)
+        var randomNumber = Math.floor((Math.random() * specialCharacters.length) + 0);
+        password = password + specialCharacters[randomNumber]
+      }
+      console.log(password)
+      console.log(alert1 - password.length)
+      var passwordLength = password.length
+      for (var i = 0; i < alert1 - passwordLength; i++) {
+        var randomNumber = Math.floor((Math.random() * possibleCharacters.length) + 0);
+        password = password + possibleCharacters[randomNumber]
+        console.log(password)
+      }    
     
-    if (alert2 === true) {
-      possbileCharacters.push(lowerCase)
-    }
-    if (alert3 === true) {
-      possbileCharacters.push(upperCase)
-    }
-    if (alert4 === true) {
-      possbileCharacters.push(numbers)
-    }
-    if (alert5 === true) {
-      possbileCharacters.push(specialCharacters)
-    }
     console.log(alert1)
 
-  passwordText.value = possbileCharacters;
+  passwordText.value = password;
 // 2. I need to have confirms assigned to ask user what they want in there password
 //     -lower case 
 //     -upper case
